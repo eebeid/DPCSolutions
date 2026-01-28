@@ -1,0 +1,79 @@
+{
+    "hero": {
+        "tagline": "Empowering Growth, Inspiring Success",
+        "title_line_1": "MISSION DRIVEN",
+        "title_line_2": "SUPPORT, CONSULTING",
+        "title_line_3": "& LEADERSHIP",
+        "subtitle": "Your strategic partner in the Intelligence and Federal contracting space.",
+        "button_text": "Get in Touch"
+    },
+    "about": {
+        "title": "Specialized Federal Contracting & Consulting",
+        "lead_text": "As a certified Service-Disabled Veteran-Owned Small Business (SDVOSB), we excel in business development, program management, and IT services.",
+        "body_text": "With a commitment to integrity and excellence, we serve federal and industry clients, guiding them through the complexities of the contracting process. Our goal is to create strategic partnerships that lead to lasting success.",
+        "values": [
+            "Integrity",
+            "Excellence",
+            "Commitment",
+            "Strategy"
+        ]
+    },
+    "services": [
+        {
+            "id": "bd",
+            "title": "Business Development & Capture",
+            "description": "Strategic growth through targeted capture management and proposal development tailored for federal acquisitions.",
+            "details": [
+                "Comprehensive Pipeline Analysis & Opportunity Identification",
+                "Full-Cycle Proposal Strategy & Color Team Reviews",
+                "Competitive Intelligence & Price-to-Win Analysis"
+            ]
+        },
+        {
+            "id": "pom",
+            "title": "Program & Operations Management",
+            "description": "Comprehensive oversight and execution of complex programs, ensuring operational efficiency and mission success.",
+            "details": [
+                "Agile Project Lifecycle Organization & Execution",
+                "Risk Management, Compliance & Quality Assurance",
+                "Resource Optimization & Logistics Coordination"
+            ]
+        },
+        {
+            "id": "msm",
+            "title": "Marketing & Stakeholder Management",
+            "description": "Building strong relationships and communicating value through effective stakeholder engagement and market positioning.",
+            "details": [
+                "Strategic Communications for Government Markets",
+                "Brand Positioning & Value Proposition Design",
+                "Key Stakeholder Engagement & Relationship Building"
+            ]
+        }
+    ],
+    "team": [
+        {
+            "id": "damien",
+            "name": "Damien",
+            "role": "Program and Operations Manager",
+            "bio": "Damien drives operational excellence and program success. With a robust foundation in project management within the Intelligence community, he ensures complex initiatives are delivered with precision, compliance, and strategic impact.",
+            "email": "damien@dpcsolutionsllc.com",
+            "phone": "808-228-2702",
+            "linkedin": "https://www.linkedin.com/in/damien-patterson-pmp-csm-sa-325a8080/"
+        },
+        {
+            "id": "courtney",
+            "name": "Courtney",
+            "role": "Marketing and Stakeholder Manager",
+            "bio": "Courtney leads strategic communications and engagement efforts. She connects the mission to the market, building lasting relationships with stakeholders and conveying DPC's value through targeted marketing and brand management.",
+            "email": "courtney@dpcsolutionsllc.com",
+            "phone": "808-372-4133",
+            "linkedin": "https://www.linkedin.com/in/courtney-chung-0565992/"
+        }
+    ],
+    "contact": {
+        "title": "Ready to Partner?",
+        "description": "Reach out to discuss how DPC Solutions can support your mission.",
+        "email": "damien@dpcsolutionsllc.com",
+        "phone": "808-228-2702"
+    }
+}

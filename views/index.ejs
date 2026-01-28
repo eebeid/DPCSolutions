@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPC Solutions | Empowering Growth, Inspiring Success</title>
+    <meta name="description"
+        content="DPC Solutions specializes in federal contracting and consulting. A certified Service-Disabled Veteran-Owned Small Business excelling in business development, program management, and IT services.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <style>
+        /* Inline overrides for specific needs */
+        .contact-info.center-content {
+            text-align: center;
+            width: 100%;
+        }
+
+        .contact-simple {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .address-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem 3rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+    <div class="grid-background"></div>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo"><img src="images/logo.png" alt="DPC Solutions" class="header-logo-img"></a>
+            <nav class="nav">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#team" class="nav-link">Leadership</a>
+                <a href="#contact" class="nav-link contact-btn">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-tagline" data-aos="fade-up">
+                    <%= content.hero.tagline %>
+                </div>
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                    <span class="block">
+                        <%= content.hero.title_line_1 %>
+                    </span>
+                    <span class="block text-gradient">
+                        <%= content.hero.title_line_2 %>
+                    </span>
+                    <span class="block">
+                        <%= content.hero.title_line_3 %>
+                    </span>
+                </h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    <%= content.hero.subtitle %>
+                </p>
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#contact" class="btn btn-primary">
+                        <%= content.hero.button_text || 'Get in Touch' %>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-decor"></div>
+            <div class="hero-bg-image"></div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content" data-aos="fade-right">
+                        <div class="section-label">Who We Are</div>
+                        <h2 class="section-title">
+                            <%= content.about.title %>
+                        </h2>
+                        <div class="accent-line"></div>
+                        <p class="lead-text">
+                            <%= content.about.lead_text %>
+                        </p>
+                        <p class="body-text">
+                            <%= content.about.body_text %>
+                        </p>
+
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <span class="stat-value">SDVOSB</span>
+                                <span class="stat-label">Certified</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">Mission</span>
+                                <span class="stat-label">Focused</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual" data-aos="fade-left">
+                        <div class="glass-card">
+                            <div class="card-content">
+                                <h3>Core Values</h3>
+                                <ul class="values-list">
+                                    <% content.about.values.forEach(function(value) { %>
+                                        <li>
+                                            <%= value %>
+                                        </li>
+                                        <% }); %>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header center">
+                    <div class="section-label">Our Expertise</div>
+                    <h2 class="section-title">Core Capabilities</h2>
+                    <p class="section-subtitle">Delivering precision and reliability in every engagement.</p>
+                </div>
+
+                <div class="services-grid">
+                    <% content.services.forEach(function(service, index) { %>
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+                            <div class="service-card-inner">
+                                <div class="service-card-front">
+                                    <% let bgImage='images/chess.avif' ; if(service.id==='pom' )
+                                        bgImage='images/operations.jpg' ; if(service.id==='msm' )
+                                        bgImage='images/corporate-management-strategy-solution-branding-concept.jpg' ;
+                                        %>
+                                        <div class="service-bg" style="background-image: url('<%= bgImage %>');"></div>
+                                        <div class="service-icon">
+                                            <!-- Simplified icon logic or reuse svg based on ID -->
+                                            <% if (service.id==='bd' ) { %>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" class="icon">
+                                                    <path
+                                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <line x1="12" y1="22.08" x2="12" y2="12" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                                <% } else if (service.id==='pom' ) { %>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" class="icon">
+                                                        <circle cx="12" cy="12" r="10" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M2 12h20" stroke="currentColor" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                                                            stroke="currentColor" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <% } else { %>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" class="icon">
+                                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                            <circle cx="9" cy="7" r="4" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+                                                        <% } %>
+                                        </div>
+                                        <h3>
+                                            <%= service.title %>
+                                        </h3>
+                                        <p>
+                                            <%= service.description %>
+                                        </p>
+                                        <button class="service-toggle">View Details</button>
+                                </div>
+                                <div class="service-card-back">
+                                    <button class="close-card-btn">&times;</button>
+                                    <h3 class="card-back-title">Key Capabilities</h3>
+                                    <ul class="service-details">
+                                        <% service.details.forEach(function(detail) { %>
+                                            <li>
+                                                <%= detail %>
+                                            </li>
+                                            <% }); %>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <% }); %>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="team">
+            <div class="container">
+                <div class="section-header center">
+                    <div class="section-label">Leadership</div>
+                    <h2 class="section-title">Meet the Team</h2>
+                    <p class="section-subtitle">Experienced professionals committed to your mission success.</p>
+                </div>
+
+                <div class="leadership-grid">
+                    <% content.team.forEach(function(member, index) { %>
+                        <div class="leader-card" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+                            <div class="leader-image-wrapper">
+                                <img src="images/<%= member.id %>.avif" alt="<%= member.name %> - DPC Solutions">
+                                <div class="leader-image-overlay"></div>
+                            </div>
+                            <div class="leader-info">
+                                <h3 class="leader-name">
+                                    <%= member.name %>
+                                </h3>
+                                <span class="leader-role">
+                                    <%= member.role %>
+                                </span>
+                                <p class="leader-bio">
+                                    <%= member.bio %>
+                                </p>
+                                <div class="leader-contact">
+                                    <a href="mailto:<%= member.email %>">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                        </svg>
+                                        <%= member.email %>
+                                    </a>
+                                    <a href="tel:<%= member.phone.replace(/-/g, '') %>">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                        </svg>
+                                        <%= member.phone %>
+                                    </a>
+                                    <% if (member.linkedin) { %>
+                                        <a href="<%= member.linkedin %>" target="_blank" rel="noopener noreferrer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path
+                                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                                </path>
+                                                <rect x="2" y="9" width="4" height="12"></rect>
+                                                <circle cx="4" cy="4" r="2"></circle>
+                                            </svg>
+                                            Connect on LinkedIn
+                                        </a>
+                                        <% } %>
+                                </div>
+                            </div>
+                        </div>
+                        <% }); %>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info center-content">
+                        <div class="section-label">Contact Us</div>
+                        <h2 class="section-title">
+                            <%= content.contact.title %>
+                        </h2>
+                        <p class="contact-desc">
+                            <%= content.contact.description %>
+                        </p>
+                        <div class="contact-simple"
+                            style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                            <a href="mailto:<%= content.contact.email %>" class="contact-link-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span>
+                                    <%= content.contact.email %>
+                                </span>
+                            </a>
+                            <a href="tel:<%= content.contact.phone.replace(/[^0-9]/g, '') %>" class="contact-link-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                                <span>
+                                    <%= content.contact.phone %>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> DPC Solutions LLC. All rights reserved.
+                </p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/company/dpc-solutionsllc/about/" target="_blank"
+                        rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
